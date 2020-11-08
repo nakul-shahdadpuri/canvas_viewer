@@ -13,5 +13,5 @@ app.on("ready",() => {
         maxHeight:600,
         maxWidth:600,
     });
-    win.loadFile('test.html')
+    win.loadFile('index.html')
 })
