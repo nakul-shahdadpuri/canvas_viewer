@@ -1,3 +1,7 @@
+// Daniel Shiffman
+// https://thecodingtrain.com/CodingChallenges/093-double-pendulum.html
+// https://youtu.be/uWzPe_S-RVE
+
 let r1 = 125;
 let r2 = 125;
 let m1 = 10;

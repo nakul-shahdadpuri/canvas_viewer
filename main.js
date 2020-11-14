@@ -1,12 +1,14 @@
 const { ipcMain } = require('electron');
 const electron = require('electron');
 const fs = require('fs');
+const { exit } = require('process');
 const {dialog} = electron;
 const app = electron.app;
 const Window = electron.BrowserWindow;
 const {ipc} = electron;
 
 let win;
+let win2;
 
 app.on("ready",() => {
     win = new Window({
@@ -26,12 +28,30 @@ app.on("ready",() => {
 
 //communication with renderer
 
+ipcMain.on('execute',(event,text) => {
+    
+    fs.writeFileSync('template/sketch.js',text,(err) => {
+        if(err){
+            console.log('BUFFER FILE ERROR');
+        };
+    })
+
+    win2 = new Window({
+        width: 600,
+        height:600
+    });
+    win2.loadFile('template/test.html');
+})
+
 ipcMain.on('save', (event,text)=> {
     let path = dialog.showSaveDialogSync(win,{defaultPath: "save.txt"});
-    fs.writeFile(path,text,(err)=>{
-        if(err){
-            console.log("ERROR");
-        }
+    if(path)
+    {
+        fs.writeFile(path,text,(err)=>{
+            if(err){
+                console.log("ERROR");
+            }
         console.log("File saved.")
     })
+    }
 });

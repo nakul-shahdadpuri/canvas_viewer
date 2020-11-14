@@ -34,7 +34,7 @@
             <span class="icon icon-minus"></span>
             </button>
             </div>
-            <button class="btn btn-primary pull-right">
+            <button class="btn btn-primary pull-right" onclick="execute()">
               Run
             </button>
         </div>
@@ -56,6 +56,11 @@
 
         let textarea = document.querySelector('textarea');
         let defaultFontSize = 20
+
+        function execute(){
+          let text = textarea.value;
+          ipcRenderer.send('execute',text)
+        }
         function decreaseFont()
         {
           textarea.style.fontSize = `${--defaultFontSize}px`
