@@ -29,7 +29,10 @@ app.on("ready",() => {
 //communication with renderer
 
 ipcMain.on('execute',(event,text) => {
-    
+
+    let x = text.indexOf("createCanvas");
+    console.log(x);
+
     fs.writeFileSync('template/sketch.js',text,(err) => {
         if(err){
             console.log('BUFFER FILE ERROR');
