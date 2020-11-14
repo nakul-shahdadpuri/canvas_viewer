@@ -6,6 +6,7 @@ const {dialog} = electron;
 const app = electron.app;
 const Window = electron.BrowserWindow;
 const {ipc} = electron;
+const ts = require("typescript")
 
 let win;
 let win2;
@@ -30,6 +31,13 @@ app.on("ready",() => {
 
 ipcMain.on('execute',(event,text) => {
 
+    // let sourceCode = text;
+    // let tsSourceFile = ts.createSourceFile(
+    //     __filename,
+    //     sourceCode,
+    //     ts.ScriptTarget.Latest
+    //   );
+    // console.log(tsSourceFile);
     let x = text.indexOf("createCanvas");
     console.log(x);
 

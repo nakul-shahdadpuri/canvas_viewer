@@ -18,5 +18,8 @@
   "homepage": "https://github.com/nakul-shahdadpuri/p5-js-IDE#readme",
   "devDependencies": {
     "electron": "^10.1.5"
+  },
+  "dependencies": {
+    "typescript": "^4.0.5"
   }
 }
