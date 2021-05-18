@@ -2,6 +2,7 @@
 
 
 ## p5-js-IDE
+P5.js is web based javascript library, which is used to create interesting art using code. Although the library, is self sufficient with it's web capabilities, I felt that creating a more desktop app solution could cater to the needs of the Indian Student, where reliable internet connection is rare in most parts of our country.
 A p5.js cross-platform IDE written in electron.
 
 ## Setup
