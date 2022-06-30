@@ -30,4 +30,7 @@ This Image is the user interface of the Developement Environment. User can choos
 
 ![Screenshot (41)](https://user-images.githubusercontent.com/43999912/176696330-b0a8c6af-8eb7-4b77-9e72-e4ad6533e83c.png)
 
-### Save Sketch window
+
+Save Sketch window
+
+### ![Screenshot (42)](https://user-images.githubusercontent.com/43999912/176701442-2ffdfe62-2201-4930-89e2-027dc960997d.png)
